@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leon</title>
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="css/leon.css" />
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+    <!-- Start Header -->
+    <div class="header">
+        <div class="container">
+            <img class="logo" src="Images/logo.png" alt="">
+            <div class="links">
+                <span class="icon">
+                    <span></span>
+                    <span id="secondSpan"></span>
+                    <span></span>
+                </span>
+                <ul id="menu">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        // define variables
+                        let secondSpan = document.getElementById('secondSpan');
+                        let menu = document.getElementById('menu');
+                        let isModified = false;
+                        // clicking in icon shows and hides the menu
+                        document.querySelector('.icon').addEventListener('click', function () {
+                            if (isModified) {
+                                secondSpan.style.width = '60%';
+                                menu.style.display = 'none';
+                                
+                            } else {
+                                secondSpan.style.width = '100%';
+                                menu.style.display = 'block';
+                            }
+                            isModified = !isModified;
+                        });
+                        // stop propagation of the icon click
+                        document.querySelector('.icon').addEventListener('click', function (event) {
+                            event.stopPropagation();
+                        });
+                        // clicking the body when menu is open closes it
+                        document.querySelector('body').addEventListener('click', function () {
+                            if (isModified) {
+                                secondSpan.style.width = '60%';
+                                menu.style.display = 'none';
+                            }
+                            isModified = !isModified;
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+    <!-- Start Landing -->
+    <div class="landing">
+        <div class="intro-text">
+            <h1>Hello There!</h1>
+            <p>We are Leon - Super Creative & Minimal Agency Web Template</p>
+        </div>
+    </div>
+    <!-- End Landing -->
+    <!-- Start Features -->
+    <div class="features">
+        <div class="container">
+            <div class="feat">
+                <i class="fas fa-magic fa-3x"></i>
+                <h3>Tell Us Your Idea</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi consequuntur sit velit quam dolor quidem aspernatur dolores cum quisquam! Consectetur voluptatum aut doloribus vero, id repellendus consequatur porro iure enim?</p>
+            </div>
+            <div class="feat">
+                <i class="far fa-gem fa-3x"></i>
+                <h3>We Will Do All The Work</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi consequuntur sit velit quam dolor quidem aspernatur dolores cum quisquam! Consectetur voluptatum aut doloribus vero, id repellendus consequatur porro iure enim?</p>
+            </div>
+            <div class="feat">
+                <i class="fas fa-globe-asia fa-3x"></i>
+                <h3>Your Product is World Wide</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi consequuntur sit velit quam dolor quidem aspernatur dolores cum quisquam! Consectetur voluptatum aut doloribus vero, id repellendus consequatur porro iure enim?</p>
+            </div>
+        </div>
+    </div>
+    <!-- End Features -->
+    <!-- Start Services -->
+        <div class="services" id="services">
+            <div class="container">
+                <h2 class="special-heading">Services</h2>
+                <p>Don't be busy, be productive.</p>
+                <div class="services-content">
+                    <div class="col">
+                        <!-- Start Service -->
+                        <div class="serv">
+                            <i class="fas fa-palette fa-2x"></i>
+                            <div class="text">
+                                <h3>Graphic Design</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptatibus at, placeat excepturi omnis nemo perspiciatis, sapiente officiis maiores beatae quas obcaecati doloremque, asperiores sint odit consequatur enim expedita sed!</p>
+                            </div>
+                        </div>
+                        <!-- End Service -->
+                        <!-- Start Service -->
+                        <div class="serv">
+                            <i class="fab fa-sketch fa-2x"></i>
+                            <div class="text">
+                                <h3>UI & UX</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptatibus at, placeat excepturi omnis nemo perspiciatis, sapiente officiis maiores beatae quas obcaecati doloremque, asperiores sint odit consequatur enim expedita sed!</p>
+                            </div>
+                        </div>
+                        <!-- End Service -->                                                                    
+                    </div>
+                    <div class="col">
+                        <!-- Start Service -->
+                        <div class="serv">
+                            <i class="fas fa-vector-square fa-2x"></i>
+                            <div class="text">
+                                <h3>Web Design</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptatibus at, placeat excepturi omnis nemo perspiciatis, sapiente officiis maiores beatae quas obcaecati doloremque, asperiores sint odit consequatur enim expedita sed!</p>
+                            </div>
+                        </div>
+                        <!-- End Service -->
+                        <!-- Start Service -->
+                        <div class="serv">
+                            <i class="fab fa-pencil-ruler fa-2x"></i>
+                            <div class="text">
+                                <h3>Web Development</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptatibus at, placeat excepturi omnis nemo perspiciatis, sapiente officiis maiores beatae quas obcaecati doloremque, asperiores sint odit consequatur enim expedita sed!</p>
+                            </div>
+                        </div>
+                        <!-- End Service -->                                                                    
+                    </div>
+                    <div class="col">
+                        <div class="image visiblity">
+                            <img src="./Images/197Umbreon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- End Services -->
+    <!-- Start Portfolio -->
+    <div class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="special-heading">Portfolio</h2>
+            <p>If you do it right, it will last forever.</p>
+            <div class="portfolio-content">
+                <div class="card">
+                    <img src="./Images/134Vaporeon.png" alt="">
+                    <div class="info">
+                        <h3>Project Here</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis adipisci obcaecati eveniet odit ab aut dolorum tempora recusandae? Quidem, doloremque eius? Consequuntur eligendi tenetur rem, sint natus incidunt explicabo earum?</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./Images/135Jolteon.png" alt="">
+                    <div class="info">
+                        <h3>Project Here</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia accusantium, placeat tempore ad molestias, enim reprehenderit excepturi velit eaque distinctio maiores consequuntur molestiae iste. Animi suscipit assumenda dolorum alias quis.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./Images/136Flareon.png" alt="">
+                    <div class="info">
+                        <h3>Project here</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem accusamus explicabo repellendus recusandae et? Ipsum eius excepturi mollitia, vero exercitationem repudiandae deserunt! Eius quae commodi quod, voluptatum neque delectus minima.</p>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <!-- End Portfolio -->
+    <!-- Start About -->
+    <div class="about" id="about">
+        <div class="container">
+            <h2 class="special-heading">About</h2>
+            <p>Less is more work</p>
+            <div class="about-content">
+                <div class="image">
+                    <img src="./Images/196Espeon.png" alt="">
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint saepe, soluta commodi ipsa eos earum nesciunt at voluptatibus recusandae esse facere in sapiente beatae ab accusamus, dolorum libero, deserunt mollitia?</p>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit officia amet, ipsam ea incidunt totam doloremque aperiam molestiae numquam perferendis ratione quaerat accusantium nesciunt itaque quia cupiditate minus. Amet, exercitationem.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->      
+    <!-- Start Contact -->
+    <div class="contact" id="contact">
+        <div class="container">
+            <h2 class="special-heading">Contact</h2>
+            <p>We are born to create.</p>
+            <div class="info">
+                <p class="label">Feel free to drop us a line at:</p>
+                <a href="mailto:leonagency@mail.com?subject=contact" class="link">leonagency@mail.com</a>
+                <div class="social">
+                    Find Us On Social Networks
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact -->
+    <!-- Start Footer -->
+    <div class="footer">
+        &copy; 2023 <span>Leon</span> All Rights Reserved.
+    </div>
+    <!-- End Footer -->
+</body>
+</html>
